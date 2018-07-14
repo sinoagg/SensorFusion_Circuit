@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=NetC28_2 Pin=U1-29
+Added Pin To Net: NetName=NetC47_2 Pin=U1-30
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

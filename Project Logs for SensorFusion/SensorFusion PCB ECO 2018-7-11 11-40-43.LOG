@@ -1,0 +1,19 @@
+Added Component: Designator=P2(DJ7161S_0.7_10AW)
+Added Pin To Net: NetName=24V Pin=P2-3
+Added Pin To Net: NetName=24V Pin=P2-4
+Added Pin To Net: NetName=24V Pin=P2-5
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=24V Pin=P2-7
+Added Pin To Net: NetName=GND Pin=P2-8
+Added Pin To Net: NetName=NetP2_9 Pin=P2-9
+Added Pin To Net: NetName=GND Pin=P2-10
+Added Pin To Net: NetName=NetP2_11 Pin=P2-11
+Added Pin To Net: NetName=GND Pin=P2-12
+Added Pin To Net: NetName=NetP2_13 Pin=P2-13
+Added Pin To Net: NetName=NetP2_14 Pin=P2-14
+Added Member To Class: ClassName=Interface Member=Component P2 DJ7166S 2*8
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

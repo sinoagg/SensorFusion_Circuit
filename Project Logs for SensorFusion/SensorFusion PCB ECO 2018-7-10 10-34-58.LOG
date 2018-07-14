@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=C49 Old DesignItemId=Cap Pol3 New DesignItemId=Cap Pol1
+Change Component Footprint: Designator=C49 Old Footprint=C0805 New Footprint=Cap_pol_8*10.2
+Change Component Footprint: Designator=C53 Old Footprint=C0805 New Footprint=Cap_pol_8*10.2
+Change Component Comment : Designator=C49 Old Comment=Cap Pol3 New Comment=Cap Pol1
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

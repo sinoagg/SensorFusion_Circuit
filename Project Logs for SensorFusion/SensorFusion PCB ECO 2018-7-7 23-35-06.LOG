@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=NetR27_1 Pin=U13-3
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

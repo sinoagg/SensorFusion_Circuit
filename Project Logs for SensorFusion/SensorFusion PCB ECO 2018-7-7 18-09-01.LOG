@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetR30_1 Pin=U1-65
+Added Pin To Net: NetName=NetR22_1 Pin=U1-66
+Added Room: Name=MCU
+Added Room: Name=Power

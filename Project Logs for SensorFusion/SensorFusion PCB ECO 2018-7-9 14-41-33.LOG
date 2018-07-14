@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=232_1_TX Pin=P1-1
+Removed Pin From Net: NetName=232_2_TX Pin=P1-3
+Removed Pin From Net: NetName=232_2_RX Pin=P1-22
+Removed Pin From Net: NetName=232_1_RX Pin=P1-24
+Added Pin To Net: NetName=232_1_RX Pin=P1-1
+Added Pin To Net: NetName=232_2_RX Pin=P1-3
+Added Pin To Net: NetName=232_2_TX Pin=P1-22
+Added Pin To Net: NetName=232_1_TX Pin=P1-24
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power
