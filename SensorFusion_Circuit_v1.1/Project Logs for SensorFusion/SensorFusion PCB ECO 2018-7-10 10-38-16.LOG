@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=D7 Old Footprint=3.5X2.8X1.9 New Footprint=1206
+Change Component Footprint: Designator=D8 Old Footprint=3.5X2.8X1.9 New Footprint=1206
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

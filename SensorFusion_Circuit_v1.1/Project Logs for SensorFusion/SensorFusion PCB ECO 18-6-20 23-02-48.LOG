@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=F2-2
+Removed Pin From Net: NetName=AUDIO_OUT Pin=P1-4
+Removed Pin From Net: NetName=RS485_B Pin=P1-5
+Removed Pin From Net: NetName=RS485_A Pin=P1-20
+Removed Pin From Net: NetName=GND Pin=P1-21
+Removed Member From Class: ClassName=Interface Member=F2
+Added Pin To Net: NetName=RS485_B Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=P1-16
+Added Pin To Net: NetName=GND Pin=P1-20
+Added Pin To Net: NetName=RS485_A Pin=P1-21

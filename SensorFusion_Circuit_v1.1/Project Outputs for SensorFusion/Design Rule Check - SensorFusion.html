@@ -1,0 +1,424 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://d:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2018/7/13</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:01:59</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc" class="file"><acronym title="E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc">E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">32</td></tr>
+</table>
+</td>
+</table><a name="IDKN4DXP3RO00U40IEW2J4EJUXHYWIZIPTBEABBKYSMRYROKHLVYD"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCCYJZ3L0N5FVD5GCTISAKELZDMTXHVZKEKEXGRJ3FN1OJZHSLPSL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEDX5FJGFYTOUKNJE3IKC0ASJEITBX3ZZABODTEHU4FRZTXJW5JGP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5QEQEDOZVTCRB4L2EQG3DVQTBBZJCAFABW1HEINSHPQUFSAKM0LP">Clearance Constraint (Gap=3mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQ5RYQZC25AL5GHQBABPNA1TYTNRTLRXUJ5GDO2I2JUCCD2WUNDRI">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRKJ43DI2WB35CZJUTJFEVB423OOSOFJF33JW1WE2GJUAVQNDY3KJ">Width Constraint (Min=10mil) (Max=100mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPLLLIKQP2JEQE1PUOXVXRIYVMBG4LAVYHSNE5IPAACFCPKHFPIG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX1X1FZTY250PKBMEXDK023PYQF313VQDTQCF4XI0JEM1D0OHUUUK">Hole Size Constraint (Min=1mil) (Max=100mil) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCFC0L3QK4XNOLVQCQ1SUSMIVMNLV3PYZCB4GP0B4I0O2MXCESZYM">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVRFN1TRXT3IZFULMQRJNYM3AKLTWG2OFOVLJ4GDOXFQARBD32BTH">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">32</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA5Z14VNZLPZEDBZUUZKR0Z3UHJVHBZS5DGSGGQF25HZ1MOO24M">Silk To Solder Mask (Clearance=0mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPGNZ1I42IFHDCT4IMNGEEZ30BOQTBRALE3KFTGEUZMHU5D3TC43C">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDE2NLC3BYYRTKI425VGVDP0Y2UBQ3EVRCXVU0TZL3AOA2QS0ZBMAB">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUXVEIC55VWY4MFTUB1XDN423UGFBTKK1WOOIJXMHU0N1ES54WJFF">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">32</td>
+</tr>
+</table><br><a name="IDVRFN1TRXT3IZFULMQRJNYM3AKLTWG2OFOVLJ4GDOXFQARBD32BTH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2406.164mil|Location2.Y=2417.414mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2406.164mil|Location2.Y=2417.414mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.336mil &lt; 10mil) Between Pad DL-1(1882.333mil,2395.747mil) on Component Side And Arc (1861.86mil,2440.038mil) on Top Solder [Top Solder] Mask Sliver [8.336mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2271.718mil|Location2.Y=2282.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2271.718mil|Location2.Y=2282.968mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.336mil &lt; 10mil) Between Pad DL-5(1882.333mil,2293.385mil) on Component Side And Arc (1861.86mil,2249.093mil) on Top Solder [Top Solder] Mask Sliver [8.336mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=1986.485mil|Location2.Y=1997.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=1986.485mil|Location2.Y=1997.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-2(2850.084mil,2004.905mil) on Component Side And Pad U10-1(2850.084mil,1979.314mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=2012.075mil|Location2.Y=2023.325mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=2012.075mil|Location2.Y=2023.325mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-3(2850.084mil,2030.495mil) on Component Side And Pad U10-2(2850.084mil,2004.905mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=2037.666mil|Location2.Y=2048.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2809.947mil|Location2.X=2821.197mil|Location1.Y=2037.666mil|Location2.Y=2048.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-4(2850.084mil,2056.086mil) on Component Side And Pad U10-3(2850.084mil,2030.495mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=1986.485mil|Location2.Y=1997.735mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=1986.485mil|Location2.Y=1997.735mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-7(2672.918mil,2004.905mil) on Component Side And Pad U10-8(2672.918mil,1979.314mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=2012.075mil|Location2.Y=2023.325mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=2012.075mil|Location2.Y=2023.325mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-6(2672.918mil,2030.495mil) on Component Side And Pad U10-7(2672.918mil,2004.905mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=2037.666mil|Location2.Y=2048.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.781mil|Location2.X=2644.031mil|Location1.Y=2037.666mil|Location2.Y=2048.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad U10-5(2672.918mil,2056.086mil) on Component Side And Pad U10-6(2672.918mil,2030.495mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2351.736mil|Location2.Y=2362.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2351.736mil|Location2.Y=2362.986mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad DL-3(1882.333mil,2344.566mil) on Component Side And Pad DL-2(1882.333mil,2370.156mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2377.327mil|Location2.Y=2388.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2377.327mil|Location2.Y=2388.577mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad DL-1(1882.333mil,2395.747mil) on Component Side And Pad DL-2(1882.333mil,2370.156mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2326.146mil|Location2.Y=2337.396mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2326.146mil|Location2.Y=2337.396mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad DL-4(1882.333mil,2318.975mil) on Component Side And Pad DL-3(1882.333mil,2344.566mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2300.555mil|Location2.Y=2311.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.212mil|Location2.X=1852.462mil|Location1.Y=2300.555mil|Location2.Y=2311.805mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.843mil &lt; 10mil) Between Pad DL-5(1882.333mil,2293.385mil) on Component Side And Pad DL-4(1882.333mil,2318.975mil) on Component Side [Top Solder] Mask Sliver [1.843mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2271.776mil|Location2.Y=2283.026mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2271.776mil|Location2.Y=2283.026mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.219mil &lt; 10mil) Between Via (1861.86mil,2249.093mil) from Component Side to Solder Side And Pad DL-5(1882.333mil,2293.385mil) on Component Side [Top Solder] Mask Sliver [8.219mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2406.106mil|Location2.Y=2417.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.235mil|Location2.X=1867.485mil|Location1.Y=2406.106mil|Location2.Y=2417.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.219mil &lt; 10mil) Between Via (1861.86mil,2440.038mil) from Component Side to Solder Side And Pad DL-1(1882.333mil,2395.747mil) on Component Side [Top Solder] Mask Sliver [8.219mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3738.471mil|Location2.Y=3749.721mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3738.471mil|Location2.Y=3749.721mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T1-4(5338.767mil,3765.812mil) on Component Side And Pad D11-1(5400.765mil,3751.503mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3655.264mil|Location2.Y=3666.514mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3655.264mil|Location2.Y=3666.514mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T1-2(5338.767mil,3667.387mil) on Component Side And Pad D11-2(5400.765mil,3676.7mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3363.193mil|Location2.Y=3374.443mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3363.193mil|Location2.Y=3374.443mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T2-4(5338.767mil,3390.535mil) on Component Side And Pad D12-1(5400.765mil,3375.612mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3279.373mil|Location2.Y=3290.623mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3279.373mil|Location2.Y=3290.623mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T2-2(5338.767mil,3292.11mil) on Component Side And Pad D12-2(5400.765mil,3300.809mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3073.363mil|Location2.Y=3084.613mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=3073.363mil|Location2.Y=3084.613mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T3-4(5338.767mil,3100.704mil) on Component Side And Pad D13-1(5400.765mil,3089.347mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=2993.107mil|Location2.Y=3004.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5366.601mil|Location2.X=5377.851mil|Location1.Y=2993.107mil|Location2.Y=3004.357mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.77mil &lt; 10mil) Between Pad T3-2(5338.767mil,3002.279mil) on Component Side And Pad D13-2(5400.765mil,3014.543mil) on Component Side [Top Solder] Mask Sliver [5.77mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3219.418mil|Location2.X=3230.668mil|Location1.Y=4122.827mil|Location2.Y=4134.077mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3219.418mil|Location2.X=3230.668mil|Location1.Y=4122.827mil|Location2.Y=4134.077mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.78mil &lt; 10mil) Between Pad U8-2(3232.917mil,4109.751mil) on Component Side And Pad U8-3(3232.917mil,4147.152mil) on Component Side [Top Solder] Mask Sliver [5.78mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3219.418mil|Location2.X=3230.668mil|Location1.Y=4085.425mil|Location2.Y=4096.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3219.418mil|Location2.X=3230.668mil|Location1.Y=4085.425mil|Location2.Y=4096.675mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.78mil &lt; 10mil) Between Pad U8-1(3232.917mil,4072.349mil) on Component Side And Pad U8-2(3232.917mil,4109.751mil) on Component Side [Top Solder] Mask Sliver [5.78mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.47mil|Location2.X=2449.72mil|Location1.Y=2726.272mil|Location2.Y=2737.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.47mil|Location2.X=2449.72mil|Location1.Y=2726.272mil|Location2.Y=2737.522mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 10mil) Between Pad U11-2(2467.583mil,2750.597mil) on Component Side And Pad U11-3(2467.583mil,2713.196mil) on Component Side [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.47mil|Location2.X=2449.72mil|Location1.Y=2763.673mil|Location2.Y=2774.923mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2438.47mil|Location2.X=2449.72mil|Location1.Y=2763.673mil|Location2.Y=2774.923mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 10mil) Between Pad U11-1(2467.583mil,2787.999mil) on Component Side And Pad U11-2(2467.583mil,2750.597mil) on Component Side [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5655.466mil|Location2.X=5666.716mil|Location1.Y=2185.081mil|Location2.Y=2196.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5655.466mil|Location2.X=5666.716mil|Location1.Y=2185.081mil|Location2.Y=2196.331mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad C17-2(5692.65mil,2220.233mil) on Component Side And Pad C17-1(5692.65mil,2161.178mil) on Component Side [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.47mil|Location2.X=2450.72mil|Location1.Y=3089.021mil|Location2.Y=3100.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.47mil|Location2.X=2450.72mil|Location1.Y=3089.021mil|Location2.Y=3100.271mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 10mil) Between Pad U13-2(2468.583mil,3113.346mil) on Component Side And Pad U13-3(2468.583mil,3075.945mil) on Component Side [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.47mil|Location2.X=2450.72mil|Location1.Y=3126.422mil|Location2.Y=3137.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.47mil|Location2.X=2450.72mil|Location1.Y=3126.422mil|Location2.Y=3137.672mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.236mil &lt; 10mil) Between Pad U13-1(2468.583mil,3150.748mil) on Component Side And Pad U13-2(2468.583mil,3113.346mil) on Component Side [Top Solder] Mask Sliver [2.236mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5664.473mil|Location2.X=5675.723mil|Location1.Y=1725.436mil|Location2.Y=1736.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5664.473mil|Location2.X=5675.723mil|Location1.Y=1725.436mil|Location2.Y=1736.686mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.85mil &lt; 10mil) Between Pad C29-1(5706.582mil,1756.714mil) on Component Side And Pad C31-1(5627.709mil,1756.672mil) on Component Side [Top Solder] Mask Sliver [9.85mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5664.473mil|Location2.X=5675.723mil|Location1.Y=1666.381mil|Location2.Y=1677.631mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5664.473mil|Location2.X=5675.723mil|Location1.Y=1666.381mil|Location2.Y=1677.631mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.85mil &lt; 10mil) Between Pad C29-2(5706.582mil,1697.659mil) on Component Side And Pad C31-2(5627.709mil,1650.373mil) on Component Side [Top Solder] Mask Sliver [9.85mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.398mil|Location2.X=5680.648mil|Location1.Y=1721.562mil|Location2.Y=1732.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.398mil|Location2.X=5680.648mil|Location1.Y=1721.562mil|Location2.Y=1732.812mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.748mil &lt; 10mil) Between Pad C29-2(5706.582mil,1697.659mil) on Component Side And Pad C29-1(5706.582mil,1756.714mil) on Component Side [Top Solder] Mask Sliver [7.748mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.116mil|Location2.X=2656.366mil|Location1.Y=2354.928mil|Location2.Y=2366.178mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2645.116mil|Location2.X=2656.366mil|Location1.Y=2354.928mil|Location2.Y=2366.178mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.185mil &lt; 10mil) Between Via (2629.148mil,2360.553mil) from Component Side to Solder Side And Via (2672.333mil,2360.553mil) from Component Side to Solder Side [Top Solder] Mask Sliver [5.185mil] / [Bottom Solder] Mask Sliver [5.185mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.301mil|Location2.X=2699.551mil|Location1.Y=2354.928mil|Location2.Y=2366.178mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\Project\git\SensorFusion\SensorFusion_Circuit\SensorFusion.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.301mil|Location2.X=2699.551mil|Location1.Y=2354.928mil|Location2.Y=2366.178mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.185mil &lt; 10mil) Between Via (2715.518mil,2360.553mil) from Component Side to Solder Side And Via (2672.333mil,2360.553mil) from Component Side to Solder Side [Top Solder] Mask Sliver [5.185mil] / [Bottom Solder] Mask Sliver [5.185mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=AP_F_GND Pin=P1-7
+Removed Pin From Net: NetName=24V Pin=P2-1
+Removed Pin From Net: NetName=AP_F_GND Pin=P2-16
+Added Component: Designator=C49(C0805)
+Added Component: Designator=C53(C0805)
+Added Pin To Net: NetName=24V Pin=C17-1
+Added Pin To Net: NetName=24V Pin=C18-1
+Added Pin To Net: NetName=24V Pin=C29-1
+Added Pin To Net: NetName=24V Pin=C31-1
+Added Pin To Net: NetName=24V Pin=C49-1
+Added Pin To Net: NetName=AP_F_GND Pin=C49-2
+Added Pin To Net: NetName=24V Pin=C53-1
+Added Pin To Net: NetName=AP_F_GND Pin=C53-2
+Added Pin To Net: NetName=BUS_24V Pin=P1-7
+Added Pin To Net: NetName=AP_F_GND Pin=P2-10
+Added Pin To Net: NetName=AP_F_GND Pin=P2-12
+Added Pin To Net: NetName=24V Pin=R21-2
+Added Pin To Net: NetName=24V Pin=R29-2
+Change Net Name : Old Net Name=AP_F_GND New Net Name=GND
+Added Pin To Net: NetName=NetP2_9 Pin=P2-9
+Added Pin To Net: NetName=NetP2_9 Pin=R25-1
+Added Net: Name=NetP2_9
+Added Pin To Net: NetName=NetP2_11 Pin=P2-11
+Added Pin To Net: NetName=NetP2_11 Pin=R17-1
+Added Net: Name=NetP2_11
+Added Pin To Net: NetName=NetP2_13 Pin=P2-13
+Added Pin To Net: NetName=NetP2_13 Pin=Q3-2
+Added Net: Name=NetP2_13
+Added Pin To Net: NetName=NetP2_14 Pin=P2-14
+Added Pin To Net: NetName=NetP2_14 Pin=Q2-2
+Added Net: Name=NetP2_14
+Added Member To Class: ClassName=AEBS component_Front Member=Component C49 Cap Pol3
+Added Member To Class: ClassName=AEBS component_Rear Member=Component C53 Cap Pol3
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

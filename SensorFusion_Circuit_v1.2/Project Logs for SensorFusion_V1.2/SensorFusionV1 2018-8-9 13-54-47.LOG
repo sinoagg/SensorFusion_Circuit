@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=24V Pin=P2-3
+Added Pin To Net: NetName=NetD9_2 Pin=P2-3
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

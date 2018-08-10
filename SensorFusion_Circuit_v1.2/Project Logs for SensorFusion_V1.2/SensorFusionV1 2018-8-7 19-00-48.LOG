@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=GND Pin=U7-9
+Removed Pin From Net: NetName=GND Pin=U12-3
+Removed Pin From Net: NetName=GND Pin=U12-4
+Removed Pin From Net: NetName=GND Pin=U12-5
+Removed Pin From Net: NetName=GND Pin=U12-6
+Added Pin To Net: NetName=D3V3 Pin=U12-3
+Added Pin To Net: NetName=NetR30_2 Pin=U12-4
+Added Pin To Net: NetName=NetR31_1 Pin=U12-5
+Added Pin To Net: NetName=NetR29_1 Pin=U12-6
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C29 Cap Pol3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C31 Cap Semi
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C37 Cap Semi
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C39 Cap Semi
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C47 Cap Semi
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component C53 Cap Pol3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component D8 LED3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component F4 mSMD260-8V  2.6A
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component F5 JK30-500
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component Q3 IRF540N
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R25 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R26 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R27 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R28 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R29 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R30 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R31 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component R32 Res3
+Added Member To Class: ClassName=AEBS component_FrontV1.2 Member=Component U13 LM321
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

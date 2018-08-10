@@ -1,0 +1,7 @@
+Change Net Name : Old Net Name=NetP2_9 New Net Name=NetR25_1
+Change Net Name : Old Net Name=NetP2_11 New Net Name=NetR17_1
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

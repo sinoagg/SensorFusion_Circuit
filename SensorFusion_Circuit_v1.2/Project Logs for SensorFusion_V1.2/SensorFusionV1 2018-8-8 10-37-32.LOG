@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=C49 Old Footprint=Cap_pol_8*10.2 New Footprint=CAP_POL_12.5*13.5
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

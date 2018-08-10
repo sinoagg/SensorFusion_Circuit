@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=24V Pin=P2-4
+Removed Pin From Net: NetName=GND Pin=U7-9
+Added Component: Designator=D9(B290)
+Added Component: Designator=D16(SMBJ33CA)
+Added Pin To Net: NetName=24V Pin=D9-1
+Added Pin To Net: NetName=GND Pin=D16-2
+Added Pin To Net: NetName=NetD9_2 Pin=D9-2
+Added Pin To Net: NetName=NetD9_2 Pin=D16-1
+Added Pin To Net: NetName=NetD9_2 Pin=P2-4
+Added Net: Name=NetD9_2
+Added Member To Class: ClassName=InterfaceV1.2 Member=Component D9 B290
+Added Member To Class: ClassName=InterfaceV1.2 Member=Component D16 SMBJ33CA
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

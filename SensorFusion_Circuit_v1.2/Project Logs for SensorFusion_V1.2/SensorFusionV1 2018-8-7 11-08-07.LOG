@@ -1,0 +1,35 @@
+Added Component: Designator=P?(DJ7246S-0.7-10AW)
+Added Pin To Net: NetName=232_1_RX Pin=P?-1
+Added Pin To Net: NetName=GND Pin=P?-2
+Added Pin To Net: NetName=232_2_RX Pin=P?-3
+Added Pin To Net: NetName=RS485_B Pin=P?-4
+Added Pin To Net: NetName=GND Pin=P?-5
+Added Pin To Net: NetName=24V Pin=P?-7
+Added Pin To Net: NetName=CAN3_H Pin=P?-8
+Added Pin To Net: NetName=24V Pin=P?-9
+Added Pin To Net: NetName=CAN2_H Pin=P?-10
+Added Pin To Net: NetName=CAN1_H Pin=P?-11
+Added Pin To Net: NetName=BUS_24V Pin=P?-12
+Added Pin To Net: NetName=NetF1_1 Pin=P?-13
+Added Pin To Net: NetName=CAN1_L Pin=P?-14
+Added Pin To Net: NetName=CAN2_L Pin=P?-15
+Added Pin To Net: NetName=GND Pin=P?-16
+Added Pin To Net: NetName=CAN3_L Pin=P?-17
+Added Pin To Net: NetName=GND Pin=P?-18
+Added Pin To Net: NetName=GND Pin=P?-20
+Added Pin To Net: NetName=RS485_A Pin=P?-21
+Added Pin To Net: NetName=232_2_TX Pin=P?-22
+Added Pin To Net: NetName=GND Pin=P?-23
+Added Pin To Net: NetName=232_1_TX Pin=P?-24
+Added Pin To Net: NetName=NetP?_6 Pin=P?-6
+Added Pin To Net: NetName=NetP?_6 Pin=U1-47
+Added Net: Name=NetP?_6
+Added Pin To Net: NetName=NetP?_19 Pin=P?-19
+Added Pin To Net: NetName=NetP?_19 Pin=U1-34
+Added Net: Name=NetP?_19
+Added Member To Class: ClassName=InterfaceV1.2 Member=Component P? DJ7246S_2x12
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

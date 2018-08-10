@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=P1 Old Footprint=DJ7246S_2*12 New Footprint=DJ7246S-0.7-10AW
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

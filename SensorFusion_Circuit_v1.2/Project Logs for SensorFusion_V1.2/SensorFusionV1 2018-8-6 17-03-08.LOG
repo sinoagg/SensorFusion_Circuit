@@ -1,0 +1,14 @@
+Added Component: Designator=R33(0603)
+Added Pin To Net: NetName=CAN2_L Pin=R33-1
+Added Pin To Net: NetName=CAN2_H Pin=R33-2
+Change Class Name : Old Net Name=AEBS component_Front New Net Name=AEBS component_FrontV1.2
+Change Class Name : Old Net Name=AEBS component_Rear New Net Name=AEBS component_RearV1.2
+Change Class Name : Old Net Name=Interface New Net Name=InterfaceV1.2
+Change Class Name : Old Net Name=MCU New Net Name=MCUv1.2
+Change Class Name : Old Net Name=Power New Net Name=PowerV1.2
+Added Member To Class: ClassName=InterfaceV1.2 Member=Component R33 120R
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

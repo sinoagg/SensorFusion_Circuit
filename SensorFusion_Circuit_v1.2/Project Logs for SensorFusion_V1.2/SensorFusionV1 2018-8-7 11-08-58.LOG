@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Net Name : Old Net Name=NetP?_6 New Net Name=NetP1_6
+Change Net Name : Old Net Name=NetP?_19 New Net Name=NetP1_19
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

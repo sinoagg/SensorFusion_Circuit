@@ -1,0 +1,30 @@
+Change Component Comment : Designator=C49 Old Comment=Cap Pol1 New Comment=220uF
+Change Component Comment : Designator=C17 Old Comment=Cap Pol3 New Comment=100uF
+Change Component Comment : Designator=C29 Old Comment=Cap Pol3 New Comment=100uF
+Change Component Comment : Designator=C18 Old Comment=Cap Semi New Comment=0.01uF
+Change Component Comment : Designator=C19 Old Comment=Cap Semi New Comment=0.1uF
+Change Component Comment : Designator=C27 Old Comment=Cap Semi New Comment=0.01uF
+Change Component Comment : Designator=C28 Old Comment=Cap Semi New Comment=0.01uF
+Change Component Comment : Designator=C31 Old Comment=Cap Semi New Comment=0.01uF
+Change Component Comment : Designator=C37 Old Comment=Cap Semi New Comment=0.1uF
+Change Component Comment : Designator=C39 Old Comment=Cap Semi New Comment=0.01uF
+Change Component Comment : Designator=R23 Old Comment=Res3 New Comment=1K
+Change Component Comment : Designator=R31 Old Comment=Res3 New Comment=1K
+Change Component Comment : Designator=R24 Old Comment=Res3 New Comment=3K
+Change Component Comment : Designator=R32 Old Comment=Res3 New Comment=3K
+Change Component Comment : Designator=R21 Old Comment=Res3 New Comment=5.1K
+Change Component Comment : Designator=R29 Old Comment=Res3 New Comment=5.1K
+Change Component Comment : Designator=R17 Old Comment=Res3 New Comment=20K
+Change Component Comment : Designator=R25 Old Comment=Res3 New Comment=20K
+Change Component Comment : Designator=R20 Old Comment=Res3 New Comment=33K
+Change Component Comment : Designator=R28 Old Comment=Res3 New Comment=33K
+Change Component Comment : Designator=R18 Old Comment=Res3 New Comment=33R
+Change Component Comment : Designator=R19 Old Comment=Res3 New Comment=33R
+Change Component Comment : Designator=R26 Old Comment=Res3 New Comment=33R
+Change Component Comment : Designator=R27 Old Comment=Res3 New Comment=33R
+Change Component Comment : Designator=R22 Old Comment=Res3 New Comment=100R
+Change Component Comment : Designator=R30 Old Comment=Res3 New Comment=100R
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetR30_1 Pin=U1-65
+Removed Pin From Net: NetName=NetR22_1 Pin=U1-66
+Added Pin To Net: NetName=NetR22_1 Pin=U1-65
+Added Pin To Net: NetName=NetR30_1 Pin=U1-66
+Added Room: Name=AEBS component_Front
+Added Room: Name=AEBS component_Rear
+Added Room: Name=Interface
+Added Room: Name=MCU
+Added Room: Name=Power

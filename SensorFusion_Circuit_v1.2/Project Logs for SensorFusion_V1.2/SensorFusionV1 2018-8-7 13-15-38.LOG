@@ -1,0 +1,14 @@
+Added Component: Designator=U7(MP2565DN)
+Added Pin To Net: NetName=NetC30_2 Pin=U7-1
+Added Pin To Net: NetName=NetC36_1 Pin=U7-3
+Added Pin To Net: NetName=NetR13_1 Pin=U7-4
+Added Pin To Net: NetName=GND Pin=U7-5
+Added Pin To Net: NetName=NetR16_2 Pin=U7-6
+Added Pin To Net: NetName=24V Pin=U7-7
+Added Pin To Net: NetName=NetC30_1 Pin=U7-8
+Added Member To Class: ClassName=PowerV1.2 Member=Component U7 MP2565DN
+Added Room: Name=AEBS component_FrontV1.2
+Added Room: Name=AEBS component_RearV1.2
+Added Room: Name=InterfaceV1.2
+Added Room: Name=MCUv1.2
+Added Room: Name=PowerV1.2
